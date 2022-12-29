@@ -40,7 +40,7 @@ try:
 except URLError as e:
     streamlit.error()
 
-streamlit.stop()
+
 
 #import snowflake.connector
 streamlit.header("The fruit load list contains:")
@@ -55,7 +55,7 @@ if streamlit.button('Get Fruit Load List'):
         my_data_rows = get_fruit_load_list()
         streamlit.dataframe(my_data_rows)
                 
-
+streamlit.stop()
 #second fruit entry row
 fruit_choices = streamlit.text_input('What fruit would you like information about?','jackfruit')
 streamlit.write('The user entered ', fruit_choices)
